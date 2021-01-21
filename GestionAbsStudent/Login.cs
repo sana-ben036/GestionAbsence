@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestionAbs
+namespace GestionAbsStudent
 {
     public partial class Login : Form
     {
@@ -17,5 +17,9 @@ namespace GestionAbs
             InitializeComponent();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
