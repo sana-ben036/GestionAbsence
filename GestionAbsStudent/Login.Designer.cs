@@ -36,11 +36,15 @@ namespace GestionAbsStudent
             this.inputPassword = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.loginType = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.loginType);
             this.groupBox1.Controls.Add(this.btnSend);
             this.groupBox1.Controls.Add(this.inputPassword);
@@ -74,17 +78,19 @@ namespace GestionAbsStudent
             // 
             // inputPseudo
             // 
-            this.inputPseudo.Location = new System.Drawing.Point(140, 55);
+            this.inputPseudo.Location = new System.Drawing.Point(140, 60);
             this.inputPseudo.Name = "inputPseudo";
             this.inputPseudo.Size = new System.Drawing.Size(354, 22);
             this.inputPseudo.TabIndex = 3;
             // 
             // inputPassword
             // 
-            this.inputPassword.Location = new System.Drawing.Point(140, 121);
+            this.inputPassword.Location = new System.Drawing.Point(140, 126);
             this.inputPassword.Name = "inputPassword";
+            this.inputPassword.PasswordChar = '*';
             this.inputPassword.Size = new System.Drawing.Size(354, 22);
             this.inputPassword.TabIndex = 4;
+            this.inputPassword.UseSystemPasswordChar = true;
             // 
             // btnSend
             // 
@@ -94,17 +100,38 @@ namespace GestionAbsStudent
             this.btnSend.TabIndex = 5;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // loginType
             // 
             this.loginType.AutoSize = true;
-            this.loginType.Location = new System.Drawing.Point(140, 172);
+            this.loginType.Location = new System.Drawing.Point(274, 185);
             this.loginType.Name = "loginType";
-            this.loginType.Size = new System.Drawing.Size(88, 21);
+            this.loginType.Size = new System.Drawing.Size(53, 21);
             this.loginType.TabIndex = 6;
             this.loginType.TabStop = true;
-            this.loginType.Text = "As Admin";
+            this.loginType.Text = "Yes";
             this.loginType.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(352, 185);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(47, 21);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "No";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(144, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Are you Admin ?";
             // 
             // Login
             // 
@@ -113,7 +140,7 @@ namespace GestionAbsStudent
             this.ClientSize = new System.Drawing.Size(1099, 602);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -130,6 +157,8 @@ namespace GestionAbsStudent
         private System.Windows.Forms.TextBox inputPseudo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

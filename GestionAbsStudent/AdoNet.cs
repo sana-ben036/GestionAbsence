@@ -16,7 +16,9 @@ namespace GestionAbsStudent
         private SqlDataReader reader;
         private SqlDataAdapter adapter;
         private string connexionString;
+        private DataTable dtAdmin;
         private DataTable dtCompte;
+        private DataTable dtRole;
         private DataTable dtAbsence;
         private DataTable dtAgent;
         private DataSet ds;
@@ -30,7 +32,9 @@ namespace GestionAbsStudent
             cmd = new SqlCommand();
             adapter = new SqlDataAdapter();
             ds = new DataSet();
+            dtAdmin = new DataTable();
             dtCompte = new DataTable();
+            dtRole = new DataTable();
             dtAbsence = new DataTable();
             dtAgent = new DataTable();
         }
@@ -44,5 +48,7 @@ namespace GestionAbsStudent
         public DataTable DtCompte { get => dtCompte; set => dtCompte = value; }
         public DataTable DtAbsence { get => dtAbsence; set => dtAbsence = value; }
         public DataTable DtAgent { get => dtAgent; set => dtAgent = value; }
+        public DataTable DtAdmin { get => dtAdmin; set => dtAdmin = value; }
+        public DataTable DtRole { get => dtRole; set => dtRole = value; }
     }
 }

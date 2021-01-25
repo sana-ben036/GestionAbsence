@@ -34,7 +34,7 @@ namespace GestionAbsStudent
             this.btnUpdateCompte = new System.Windows.Forms.Button();
             this.btnDeleteCompte = new System.Windows.Forms.Button();
             this.btnSaveCompte = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listAgent = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.inputAgentPseudo = new System.Windows.Forms.TextBox();
@@ -44,12 +44,14 @@ namespace GestionAbsStudent
             this.listRole = new System.Windows.Forms.ComboBox();
             this.dgvCompte = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnOut = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompte)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnOut);
             this.groupBox1.Controls.Add(this.btnSaveCompte);
             this.groupBox1.Controls.Add(this.btnDeleteCompte);
             this.groupBox1.Controls.Add(this.btnUpdateCompte);
@@ -69,6 +71,7 @@ namespace GestionAbsStudent
             this.btnAddCompte.TabIndex = 0;
             this.btnAddCompte.Text = "Nouveau Compte";
             this.btnAddCompte.UseVisualStyleBackColor = true;
+            this.btnAddCompte.Click += new System.EventHandler(this.btnAddCompte_Click);
             // 
             // btnUpdateCompte
             // 
@@ -78,6 +81,7 @@ namespace GestionAbsStudent
             this.btnUpdateCompte.TabIndex = 1;
             this.btnUpdateCompte.Text = "Modifier";
             this.btnUpdateCompte.UseVisualStyleBackColor = true;
+            this.btnUpdateCompte.Click += new System.EventHandler(this.btnUpdateCompte_Click);
             // 
             // btnDeleteCompte
             // 
@@ -87,6 +91,7 @@ namespace GestionAbsStudent
             this.btnDeleteCompte.TabIndex = 2;
             this.btnDeleteCompte.Text = "Supprimer";
             this.btnDeleteCompte.UseVisualStyleBackColor = true;
+            this.btnDeleteCompte.Click += new System.EventHandler(this.btnDeleteCompte_Click);
             // 
             // btnSaveCompte
             // 
@@ -96,14 +101,17 @@ namespace GestionAbsStudent
             this.btnSaveCompte.TabIndex = 3;
             this.btnSaveCompte.Text = "Enregister ";
             this.btnSaveCompte.UseVisualStyleBackColor = true;
+            this.btnSaveCompte.Click += new System.EventHandler(this.btnSaveCompte_Click);
             // 
-            // comboBox1
+            // listAgent
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(509, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(346, 24);
-            this.comboBox1.TabIndex = 1;
+            this.listAgent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.listAgent.FormattingEnabled = true;
+            this.listAgent.Location = new System.Drawing.Point(509, 57);
+            this.listAgent.Name = "listAgent";
+            this.listAgent.Size = new System.Drawing.Size(346, 24);
+            this.listAgent.TabIndex = 1;
+            this.listAgent.SelectedIndexChanged += new System.EventHandler(this.listAgent_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -157,6 +165,7 @@ namespace GestionAbsStudent
             // 
             // listRole
             // 
+            this.listRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.listRole.FormattingEnabled = true;
             this.listRole.Location = new System.Drawing.Point(509, 245);
             this.listRole.Name = "listRole";
@@ -165,9 +174,11 @@ namespace GestionAbsStudent
             // 
             // dgvCompte
             // 
+            this.dgvCompte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCompte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompte.Location = new System.Drawing.Point(258, 346);
             this.dgvCompte.Name = "dgvCompte";
+            this.dgvCompte.ReadOnly = true;
             this.dgvCompte.RowHeadersWidth = 51;
             this.dgvCompte.RowTemplate.Height = 24;
             this.dgvCompte.Size = new System.Drawing.Size(764, 285);
@@ -181,6 +192,16 @@ namespace GestionAbsStudent
             this.label5.Size = new System.Drawing.Size(114, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "List des comptes";
+            // 
+            // btnOut
+            // 
+            this.btnOut.Location = new System.Drawing.Point(37, 481);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(151, 38);
+            this.btnOut.TabIndex = 4;
+            this.btnOut.Text = "Quitter";
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // Admin
             // 
@@ -196,10 +217,11 @@ namespace GestionAbsStudent
             this.Controls.Add(this.inputAgentPseudo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.listAgent);
             this.Controls.Add(this.groupBox1);
             this.Name = "Admin";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompte)).EndInit();
             this.ResumeLayout(false);
@@ -214,7 +236,7 @@ namespace GestionAbsStudent
         private System.Windows.Forms.Button btnDeleteCompte;
         private System.Windows.Forms.Button btnUpdateCompte;
         private System.Windows.Forms.Button btnAddCompte;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox listAgent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox inputAgentPseudo;
@@ -224,5 +246,6 @@ namespace GestionAbsStudent
         private System.Windows.Forms.ComboBox listRole;
         private System.Windows.Forms.DataGridView dgvCompte;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnOut;
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\bin\Debug\GestionAbsStudent.exe.config
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\bin\Debug\GestionAbsStudent.exe
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\bin\Debug\GestionAbsStudent.pdb
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.csprojAssemblyReference.cache
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.Admin.resources
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.Login.resources
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.Properties.Resources.resources
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.csproj.GenerateResource.cache
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.csproj.CoreCompileInputs.cache
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.exe
+C:\Users\youcode\source\repos\sana-ben036\GestionAbsence\GestionAbsStudent\obj\Debug\GestionAbsStudent.pdb
